@@ -1,2 +1,2 @@
 # PyFlaskTest
-a besic web server for DevOps tests
+a basic web server for DevOps tests
