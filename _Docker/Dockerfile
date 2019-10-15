@@ -22,7 +22,7 @@ WORKDIR /_app
 #ENV HOME /webapp/v9_Docker/application/
 #WORKDIR /webapp/v9_Docker/application/
 
-EXPOSE 50
+EXPOSE 5000
 
 RUN ls -l 
 RUN pwd && ls -l
