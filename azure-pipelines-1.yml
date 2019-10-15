@@ -24,14 +24,9 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
+        containerRegistry: 'connexiontomouradresgitry'
         repository: $(imageName)
-        command: build
+        command: buildAndPush
         Dockerfile: _Docker/Dockerfile
         tags: |
           $(tag)
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'connexiontomouradresgitry'
-        repository: 'v1/apptest1'
-        command: 'push'
-
