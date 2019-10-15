@@ -7,6 +7,8 @@ RUN apt-get -y upgrade
 RUN apt-get install -y apt-utils 
 RUN apt-get install -y python-pip python-dev build-essential
 RUN apt-get install -y git gzip wget unzip 
+RUN pip install Flask
+RUN pip install flask
 RUN wget https://github.com/MourIdri/PyFlaskTest/archive/master.zip  \
     && unzip master.zip && cd PyFlaskTest-master/_app/ && ls -l && mkdir /_app && cp -r * /_app && pwd && ls -l
 RUN pwd && ls -l
