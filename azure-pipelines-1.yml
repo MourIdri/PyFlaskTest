@@ -29,5 +29,9 @@ stages:
         Dockerfile: _Docker/Dockerfile
         tags: |
           $(tag)
-
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'connexiontomouradresgitry'
+        repository: 'v1/apptest1'
+        command: 'push'
 
