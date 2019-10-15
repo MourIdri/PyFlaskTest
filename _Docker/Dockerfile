@@ -20,7 +20,7 @@ WORKDIR /_app
 EXPOSE 50
 
 RUN ls -l 
-RUN pwd 
+RUN pwd && ls -l 
 
 
 #ENTRYPOINT ["python"]
