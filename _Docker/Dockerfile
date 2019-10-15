@@ -10,9 +10,10 @@ RUN apt-get install -y git gzip wget unzip
 RUN wget https://github.com/MourIdri/PyFlaskTest/archive/master.zip  \
     && unzip master.zip && cd PyFlaskTest-master/_app/
 RUN pwd && ls -l
-RUN pwd && ls -l
+
 RUN mkdir /_app
-COPY . /_app
+COPY ./PyFlaskTest-master/_app/ /_app
+RUN cd /PyFlaskTest-master/_app/ && pwd && ls -l
 WORKDIR /_app
 
 # Set the default directory for our environment
@@ -22,7 +23,7 @@ WORKDIR /_app
 EXPOSE 50
 
 RUN ls -l 
-RUN pwd && ls -l &&
+RUN pwd && ls -l
 RUN pwd
 
 #ENTRYPOINT ["python"]
