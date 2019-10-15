@@ -6,9 +6,10 @@ RUN apt-get update -y
 RUN apt-get -y upgrade
 RUN apt-get install -y apt-utils 
 RUN apt-get install -y python-pip python-dev build-essential
-RUN apt-get install -y git gzip wget unzip
-RUN git clone https://github.com/MourIdri/PyFlaskTest.git \
-&& cd _app/
+RUN apt-get install -y git gzip wget unzip 
+RUN wget https://github.com/MourIdri/PyFlaskTest/archive/master.zip  \
+    && unzip master.zip && cd PyFlaskTest-master/_app/
+RUN mkdir /_app
 COPY . /_app
 WORKDIR /_app
 
