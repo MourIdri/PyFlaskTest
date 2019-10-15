@@ -8,12 +8,12 @@ RUN apt-get install -y apt-utils
 RUN apt-get install -y python-pip python-dev build-essential
 RUN apt-get install -y git gzip wget unzip 
 RUN wget https://github.com/MourIdri/PyFlaskTest/archive/master.zip  \
-    && unzip master.zip && cd PyFlaskTest-master/_app/
+    && unzip master.zip && cd PyFlaskTest-master/_app/ && ls -l && mkdir /_app && cp -r * /_app && pwd && ls -l
 RUN pwd && ls -l
 
-RUN mkdir /_app
-COPY ./PyFlaskTest-master/_app/ /_app
-RUN cd /PyFlaskTest-master/_app/ && pwd && ls -l
+#RUN mkdir /_app
+#COPY ./PyFlaskTest-master/_app/ /_app
+#RUN cd /PyFlaskTest-master/_app/ && pwd && ls -l
 WORKDIR /_app
 
 # Set the default directory for our environment
