@@ -28,5 +28,4 @@ stages:
         repository: $(imageName)
         command: buildAndPush
         Dockerfile: _Docker/Dockerfile
-        tags: |
-          $(tag)
+        tags: 'latest'
