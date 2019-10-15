@@ -9,6 +9,8 @@ RUN apt-get install -y python-pip python-dev build-essential
 RUN apt-get install -y git gzip wget unzip 
 RUN wget https://github.com/MourIdri/PyFlaskTest/archive/master.zip  \
     && unzip master.zip && cd PyFlaskTest-master/_app/
+RUN pwd && ls -l
+RUN pwd && ls -l
 RUN mkdir /_app
 COPY . /_app
 WORKDIR /_app
@@ -20,8 +22,8 @@ WORKDIR /_app
 EXPOSE 50
 
 RUN ls -l 
-RUN pwd && ls -l 
-
+RUN pwd && ls -l &&
+RUN pwd
 
 #ENTRYPOINT ["python"]
 CMD ["python","-u","web_flask_server.py"]
