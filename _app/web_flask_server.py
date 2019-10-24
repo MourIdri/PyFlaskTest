@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Index! Root page for a test CI & CD "
+    return "Index! Root page for a test CI & CD and a new test "
 
 @app.route("/hello")
 def hello():
