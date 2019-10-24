@@ -28,6 +28,7 @@ RUN ls -l
 RUN pwd && ls -l
 RUN pwd
 
+
 #ENTRYPOINT ["python"]
 CMD ["python","-u","web_flask_server.py"]
 #CMD ["python","-u","app.py"]
